@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Timetable</title>
+    <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+
+    <!-- Hero -->
+    <div class="hero">
+        <span class="hero-label">Live Schedule</span>
+        <h1>Bus <span>Timetable</span></h1>
+        <p>Find your route, check timings, and plan your journey.</p>
+    </div>
+
+    <!-- Search -->
+    <div class="search-container">
+        <div class="search-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0Z"/>
+            </svg>
+            <input type="text" id="search-bar" placeholder="Search by route or destination…" onkeyup="searchBus()">
+        </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="bus-container">
+
+        <div class="bus-timetable">
+            <img src="/Images/20240311_142944.jpg" alt="Bus Image 1">
+            <div class="details">
+                <p>Kaluthara – Kaduwela A/C Highway</p>
+                <p><a href="tel:077 230 7746">📞 077 230 7746</a></p>
+                <div class="timing-chips">
+                    From Kaluthara
+                    <span class="timing-chip">06:15</span>
+                    <span class="timing-chip">07:00</span>
+                    <span class="timing-chip">10:20</span>
+                    <span class="timing-chip">04:30</span>
+                </div>
+                <div class="timing-chips">
+                    From Kaduwela
+                    <span class="timing-chip">08:00</span>
+                    <span class="timing-chip">14:30</span>
+                    <span class="timing-chip">17:00</span>
+                    <span class="timing-chip">18:00</span>
+                </div>
+            </div>
+        </div>
+        <div class="bus-timetable">
+            <img src="Images/20250918_003634.jpg" alt="Bus Image 1">
+            <div class="details">
+                <p>Kaluthara – Kaduwela A/C Highway</p>
+                <p><a href="tel:077 230 7746">📞 077 230 7746</a></p>
+                <div class="timing-chips">
+                    From Kaluthara
+                    <span class="timing-chip">06:15</span>
+                    <span class="timing-chip">07:00</span>
+                    <span class="timing-chip">10:20</span>
+                    <span class="timing-chip">04:30</span>
+                </div>
+                <div class="timing-chips">
+                    From Kaduwela
+                    <span class="timing-chip">08:00</span>
+                    <span class="timing-chip">14:30</span>
+                    <span class="timing-chip">17:00</span>
+                    <span class="timing-chip">18:00</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="bus-timetable">
+            <img src="Images/20240918_171657.jpg" alt="Bus Image 2">
+            <div class="details">
+                <p>Kaluthara - Maharagama Highway</p>
+                <p><a href="tel:077 37 51 974">📞 077 37 51 974</a></p>
+                From Kaluthara
+                <div class="timing-chips">
+                    <span class="timing-chip">06:50</span>
+                    <span class="timing-chip">10:30</span>
+                    <span class="timing-chip">15:50</span>
+                </div>
+                From Maharagama
+                <div class="timing-chips">
+                    <span class="timing-chip">08:25</span>
+                    <span class="timing-chip">13:25</span>
+                    <span class="timing-chip">17:30</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bus-timetable">
+            <img src="Images/20241028_084536.jpg" alt="Bus Image 2">
+            <div class="details">
+                <p>Pittugala - Nugegoda (689)</p>
+                <p><a href="tel:071 21 05 256">📞 071 21 05 256</a></p>
+                <div class="timing-chips">
+                    <span class="timing-chip">06:00</span>
+                    <span class="timing-chip">06:25</span>
+                    <span class="timing-chip">06:55</span>
+                    <span class="timing-chip">07:15</span>
+                    <span class="timing-chip">08:20</span>
+                    <span class="timing-chip">09:00</span>
+                    <span class="timing-chip">09:35</span>
+                    <span class="timing-chip">10:10</span>
+                    <span class="timing-chip">10:45</span>
+                </div>
+            </div>
+        </div>
+         <div class="bus-timetable">
+            <img src="Images/20250814_163736.jpg" alt="Bus Image 2">
+            <div class="details">
+                <p>Maharagama - Mathugama</p>
+                <p><a href="tel:078 49 89 620">📞 078 49 89 620</a></p>
+                From Maharagama
+                <div class="timing-chips">
+                    <span class="timing-chip">07:15</span>
+                    <span class="timing-chip">14:00</span>
+                </div>
+                From Mathugama
+                <div class="timing-chips">
+                    <span class="timing-chip">09:40</span>
+                    <span class="timing-chip">17:00</span>
+                </div>
+            </div>
+        </div>
+         <div class="bus-timetable">
+            <img src="Images/20250817_173254(1).jpg" alt="Bus Image 2">
+            <div class="details">
+                <p>Aluthgama - Kaduwela</p>
+                <p><a href="tel:070 77 71 133">📞 070 77 71 133</a></p>
+                <p><a href="tel:071 43 50 650">📞 071 43 50 650</a></p>
+                From Aluthgama
+                <div class="timing-chips">
+                    <span class="timing-chip">06:15</span>
+                    <span class="timing-chip">07:15</span>
+                    <span class="timing-chip">10:15</span>
+                    <span class="timing-chip">13:00</span>
+                    <span class="timing-chip">15:00</span>
+                    <span class="timing-chip">16:15</span>
+                </div>
+                From Kaduwela
+                <div class="timing-chips">
+                    <span class="timing-chip">08:30</span>
+                    <span class="timing-chip">11:00</span>
+                    <span class="timing-chip">13:00</span>
+                    <span class="timing-chip">15:00</span>
+                    <span class="timing-chip">16:45</span>
+                    <span class="timing-chip">18:15</span>
+                </div>
+            </div>
+        </div>
+            <div class="bus-timetable">
+                <img src="Images/20250909_105446.jpg" alt="Bus Image 2">
+                <img src="Images/FB_IMG_1770428333388.jpg" alt="Bus Image 2">
+                <div class="details">
+                    <p>Kaduwela Panadura</p>
+                    
+                    <p><a href="tel:077 45 15 002">📞 077 45 15 002</a></p>  
+                    </div>
+                </div>
+        <div class="bus-timetable">
+            <img src="Images/FB_IMG_1759243433372.jpg" alt="Bus Image 2">
+            <div class="details">
+                <p>Bulathsinhala - Kaduwela</p>
+                <p><a href="tel:074 35 88 397">📞 074 35 88 397</a></p> 
+                From Bulathsinhala
+                <div class="timing-chips">
+                    <span class="timing-chip">06:00</span>
+                    <span class="timing-chip">11:00</span>
+                    <span class="timing-chip">15:00</span>
+                </div>
+                From Kaduwela
+                <div class="timing-chips">
+                    <span class="timing-chip">08:20</span>
+                    <span class="timing-chip">13:30</span>
+                    <span class="timing-chip">17:30</span>
+                </div>
+            </div>
+        </div>
+        <div class="bus-timetable">
+            <img src="Images/FB_IMG_1765603307304.jpg" alt="Bus Image 2">
+            <img src="Images/Screenshot_20260109_164641_Facebook.jpg" alt="Bus Image 2">
+        
+            <div class="details">
+                <p>Palawatta - Kaduwela</p>
+                <p><a href="tel:070 323 73 65">📞 070 323 73 65</a></p>
+                From Palawatta
+                <div class="timing-chips">
+                    <span class="timing-chip">06:20</span>
+                </div>
+                From Kaduwela
+                <div class="timing-chips">
+                    <span class="timing-chip">16:45</span>
+                </div>
+            </div>
+        </div>
+        <div class="bus-timetable">
+            <img src="Images/FB_IMG_1765603308963.jpg" alt="Bus Image 2">
+            <div class="details">
+                <p>Palawatta - Migamuwa</p>
+                <p><a href="tel:070 351 60 21">📞 070 351 60 21</a></p>
+                From Palawatta
+                <div class="timing-chips">
+                    <span class="timing-chip">06:35</span>
+                </div>
+                From Migamuwa
+                <div class="timing-chips">
+                    <span class="timing-chip">15:50</span>
+                </div>
+            </div>
+        </div>
+        <div class="bus-timetable">
+            <img src="Images/Screenshot_20250103_213753_Facebook.jpg" alt="Bus Image 2">
+            <div class="details">
+                <p>Kaduwela - Kadawatha</p>
+                <p><a href="tel:071 626 56 57">📞 071 626 56 57</a></p>
+            </div>
+        </div>
+        <div class="bus-timetable">
+            <img src="Images/FB_IMG_1767188803471.jpg" alt="Bus Image 2">
+            <div class="details">
+                <p>Kaluthara - Mathara</p>
+                <p><a href="tel:076 311 57 03">📞 076 311 57 03</a></p>
+                <p><a href="tel:074 296 56 23">📞 074 296 56 23</a></p>
+                From Kaluthara
+                <div class="timing-chips">
+                    <span class="timing-chip">06:30</span>
+                    <span class="timing-chip">14:00</span>
+                </div>
+                From Mathara
+                <div class="timing-chips">
+                    <span class="timing-chip">09:30</span>
+                    <span class="timing-chip">17:20</span>
+                </div>
+            </div>
+        </div>
+        <div class="bus-timetable">
+            <img src="Images/FB_IMG_1767548388413.jpg" alt="Bus Image 2">
+            <div class="details">
+                <p>Mathugama - Homagama (NSBM)</p>
+                <p><a href="tel:076 694 85 28">📞 076 694 85 28</a></p>
+                From Mathugama
+                <div class="timing-chips">
+                    <span class="timing-chip">07:20</span>
+                    <span class="timing-chip">12:40</span>
+                </div>
+                From NSBM
+                <div class="timing-chips">
+                    <span class="timing-chip">11:10</span>
+                    <span class="timing-chip">17:15</span>
+                </div>
+            </div>
+        </div>
+        <div class="bus-timetable">
+            <img src="Images/FB_IMG_1770514363097.jpg" alt="Bus Image 2">
+            <div class="details">
+                <p>Colombo - Neluwa</p>
+                <p><a href="tel:076 071 92 47">📞 076 071 92 47</a></p>
+                From Colombo
+                <div class="timing-chips">
+                    <span class="timing-chip">05:55 a.m</span>
+                </div>
+                From Neluwa
+                <div class="timing-chips">
+                    <span class="timing-chip">11:20 a.m</span>
+                </div>
+            </div>
+        </div>
+        <div class="bus-timetable">
+            <img src="Images/FB_IMG_1770785801439.jpg" alt="Bus Image 2">
+            <img src="Images/Screenshot_20240922_130545_Facebook.jpg" alt="Bus Image 2">
+            <div class="details">
+                <p>Baduraliya - Colombo</p>
+                <p><a href="tel:071 081 43 20">📞 071 081 43 20</a></p>
+                From Baduraliya
+                <div class="timing-chips">
+                    <span class="timing-chip">06:25 a.m</span>
+                </div>
+                From Colombo
+                <div class="timing-chips">
+                    <span class="timing-chip">02:30 p.m</span>
+                </div>
+            </div>
+        </div>
+        <div class="bus-timetable">
+            <img src="Images/FB_IMG_1770829622949.jpg" alt="Bus Image 2">
+            <div class="details">
+                <p>Maharagama - Mathugama</p>
+                <p><a href="tel:071 110 06 10">📞 071 110 06 10</a></p>
+                From Mathugama
+                <div class="timing-chips">
+                    <span class="timing-chip">06:15 a.m</span>
+                    <span class="timing-chip">11:15 a.m</span>
+                </div>
+                From Maharagama
+                <div class="timing-chips">
+                    <span class="timing-chip">08:15 a.m</span>
+                    <span class="timing-chip">5:50 p.m</span>
+                </div>
+            </div>
+        </div>
+          <div class="bus-timetable">
+            <img src="Images/Screenshot_20251211_061704_Facebook.jpg" alt="Bus Image 2">
+            <div class="details">
+                <p>Palawatta - Maharagama</p>
+                <p><a href="tel:078 772 77 93">📞 078 772 77 93</a></p>
+                <p><a href="tel:076 740 30 13">📞 076 740 30 13</a></p>
+                From Palawatta
+                <div class="timing-chips">
+                    <span class="timing-chip">06:45 a.m</span>
+                    <span class="timing-chip">02:10 p.m</span>
+                </div>
+                From Maharagama
+                <div class="timing-chips">
+                    <span class="timing-chip">08:55 a.m</span>
+                    <span class="timing-chip">04:50 p.m</span>
+                </div>
+            </div>
+        </div>
+         <div class="bus-timetable">
+            <img src="Images/IMG-20241008-WA0165.jpg" alt="Bus Image 2">
+            <div class="details">
+                <p>Mathugama - Kadawatha</p>
+                <p><a href="tel:071 769 75 97">📞 071 769 75 97</a></p>
+                <p><a href="tel:078 58 02 005">📞 078 58 02 005</a></p>
+                From Mathugama
+                <div class="timing-chips">
+                    <span class="timing-chip">06:15 a.m</span>
+                    <span class="timing-chip">11:15 a.m</span>
+                </div>
+                From Maharagama
+                <div class="timing-chips">
+                    <span class="timing-chip">08:15 a.m</span>
+                    <span class="timing-chip">5:50 p.m</span>
+                </div>
+            </div>
+        </div>
+          <div class="bus-timetable">
+            <img src="Images/IMG-20241008-WA0167.jpg" alt="Bus Image 2">
+            <div class="details">
+                <p>Mathugama - Makubura</p>
+                </div>
+            </div>
+            <div class="bus-timetable">
+            <img src="Images/IMG-20260118-WA0044.jpg" alt="Bus Image 2">
+            <div class="details">
+                <p>Mathugama - Kaduwela</p>
+                <p><a href="tel:071 15 40 440">📞 071 15 40 440</a></p>
+                From Mathugama
+                <div class="timing-chips">
+                    <span class="timing-chip">06:40 a.m</span>
+                    <span class="timing-chip">10:40 a.m</span>
+                    <span class="timing-chip">03:00 p.m</span>
+                </div>
+                From Kaduwela
+                <div class="timing-chips">
+                    <span class="timing-chip">09:00 a.m</span>
+                    <span class="timing-chip">01:30 p.m</span>
+                    <span class="timing-chip">05:30 p.m</span>
+                </div>
+            </div>
+        </div>
+        <div class="bus-timetable">
+            <img src="Images/FB_IMG_1734053582767.jpg" alt="Bus Image 2">
+            <div class="details">
+                <p>Mathugama - Colombo</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="no-results" id="no-results">No buses match your search.</div>
+    </div>
+
+    <script src="Home.js"></script>
+</body>
+</html>
