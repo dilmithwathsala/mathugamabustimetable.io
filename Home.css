@@ -4,13 +4,13 @@
     --bg: #f7f5f0;
     --surface: #ffffff;
     --surface-hover: #fefefe;
-    --accent: #2a6049;
+    --accent: #000000;
     --accent-light: #e8f4ef;
-    --accent-soft: #3d8c6e;
+    --accent-soft: #888c3d;
     --text-primary: #1a1a1a;
     --text-secondary: #6b7280;
     --text-muted: #9ca3af;
-    --border: #e5e2dc;
+    --border: #fea900;
     --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
     --shadow-md: 0 4px 20px rgba(0,0,0,0.07), 0 2px 8px rgba(0,0,0,0.04);
     --shadow-hover: 0 8px 32px rgba(42,96,73,0.12), 0 4px 12px rgba(0,0,0,0.06);
@@ -136,9 +136,9 @@ body::before {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     gap: 20px;
-    max-width: 1200px;
+    max-width: 1800px;
     margin: 0 auto;
-    padding: 0 24px 60px;
+    padding: 0 20px 60px;
 }
 
 /* ── Card ────────────────────────────────────────── */
@@ -160,7 +160,7 @@ body::before {
 .bus-timetable:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-hover);
-    border-color: rgba(42,96,73,0.25);
+    border-color: rgba(255, 0, 0, 0.25);
 }
 
 @keyframes fadeUp {
@@ -184,7 +184,7 @@ body::before {
 
 /* ── Image panel ─────────────────────────────────── */
 .bus-timetable img {
-    width: 120px;
+    width: 110px;
     min-height: 130px;
     object-fit: cover;
     flex-shrink: 0;
@@ -211,9 +211,9 @@ body::before {
 
 /* Route label */
 .details p:first-child {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--text-primary);
     line-height: 1.3;
     margin-bottom: 2px;
