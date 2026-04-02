@@ -10,6 +10,7 @@
 
     <!-- Hero -->
     <div class="hero">
+        <button id="theme-toggle" class="theme-toggle">🌙</button>
         <span class="hero-label">Mathugama Based</span>
         <h1>Bus <span>Timetable</span></h1>
         <p>Find your route, check timings, and plan your journey.</p>
@@ -24,6 +25,32 @@
             <input type="text" id="search-bar" placeholder="Search by route or destination…" onkeyup="searchBus()">
         </div>
     </div>
+    <div class="filters">
+
+    <select id="from-filter">
+        <option value="">From</option>
+        <option value="Mathugama">Mathugama</option>
+        <option value="Kaluthara">Kaluthara</option>
+        <option value="Kaduwela">Kaduwela</option>
+        <option value="Maharagama">Maharagama</option>
+    </select>
+
+    <select id="to-filter">
+        <option value="">To</option>
+        <option value="Colombo">Colombo</option>
+        <option value="Kaduwela">Kaduwela</option>
+        <option value="Kadawatha">Kadawatha</option>
+        <option value="Maharagama">Maharagama</option>
+    </select>
+
+    <!-- <select id="time-filter">
+        <option value="">Time</option>
+        <option value="morning">Morning (5–11)</option>
+        <option value="afternoon">Afternoon (12–4)</option>
+        <option value="evening">Evening (4+)</option>
+    </select> -->
+
+</div>
 
     <!-- Cards -->
     <div class="bus-container">
@@ -31,27 +58,6 @@
         <div class="bus-timetable">
             <img src="/Images/20240311_142944.jpg" alt="Bus Image 1">
             <img src="Images/20250918_003634.jpg" alt="Bus Image 1">
-            <div class="details">
-                <p>Kaluthara – Kaduwela A/C Highway</p>
-                <p><a href="tel:077 230 7746">📞 077 230 7746</a></p>
-                <!-- <div class="timing-chips">
-                    From Kaluthara
-                    <span class="timing-chip">06:15</span>
-                    <span class="timing-chip">07:00</span>
-                    <span class="timing-chip">10:20</span>
-                    <span class="timing-chip">04:30</span>
-                </div>
-                <div class="timing-chips">
-                    From Kaduwela
-                    <span class="timing-chip">08:00</span>
-                    <span class="timing-chip">14:30</span>
-                    <span class="timing-chip">17:00</span>
-                    <span class="timing-chip">18:00</span>
-                </div> -->
-            </div>
-        </div>
-        <div class="bus-timetable">
-            
             <div class="details">
                 <p>Kaluthara – Kaduwela A/C Highway</p>
                 <p><a href="tel:077 230 7746">📞 077 230 7746</a></p>
