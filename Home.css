@@ -184,7 +184,6 @@ select {
     position: absolute;
     right: 18px;
     top: 50%;
-    transform: translateY(-50%);
     width: 36px;
     height: 36px;
     border: none;
@@ -195,7 +194,9 @@ select {
     display: grid;
     place-items: center;
     font-size: 1rem;
-    transition: background var(--transition), transform var(--transition);
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+    transition: background var(--transition), transform var(--transition), opacity 0.3s ease;
 }
 
 .search-clear:hover {
@@ -204,7 +205,10 @@ select {
 }
 
 .search-clear.hidden {
-    display: none;
+    opacity: 0;
+    transform: translateY(-50%) scale(0.8);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 #search-bar:focus {
@@ -265,11 +269,19 @@ select {
     border: 1px solid var(--border);
     overflow: hidden;
     box-shadow: var(--shadow);
-    transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.bus-timetable {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: opacity var(--transition), transform var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 
 .bus-timetable.hidden {
-    display: none !important;
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+    pointer-events: none;
+    transition: opacity var(--transition), transform var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 
 .bus-timetable:hover {
@@ -357,27 +369,41 @@ select {
     color: var(--text-muted);
     text-align: center;
     font-size: 1.05rem;
-    display: none;
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity var(--transition), transform var(--transition);
+    max-height: 0;
+    overflow: hidden;
 }
 
 .no-results.visible {
-    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    max-height: 300px;
 }
 
 .lightbox-overlay {
     position: fixed;
     inset: 0;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(15, 23, 42, 0.88);
+    background: rgba(15, 23, 42, 0);
     z-index: 9999;
     padding: 24px;
-    backdrop-filter: blur(14px);
+    backdrop-filter: blur(0px);
+    opacity: 0;
+    pointer-events: none;
+    transition: background 0.4s ease, backdrop-filter 0.4s ease, opacity 0.4s ease;
 }
 
 .lightbox-overlay.active {
-    display: flex;
+    background: rgba(15, 23, 42, 0.88);
+    backdrop-filter: blur(14px);
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .lightbox-overlay img {
@@ -385,6 +411,14 @@ select {
     max-height: 88vh;
     border-radius: 24px;
     box-shadow: 0 38px 90px rgba(0,0,0,0.35);
+    opacity: 0;
+    transform: scale(0.92);
+    transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s;
+}
+
+.lightbox-overlay.active img {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .lightbox-close {

@@ -21,7 +21,7 @@ function updateSearchResults() {
 
     let visibleCount = 0;
 
-    cards.forEach(card => {
+    cards.forEach((card, index) => {
         const text = card.innerText.toLowerCase();
         const matchSearch = !query || text.includes(query);
         const matchFrom = !fromValue || text.includes(fromValue);
@@ -29,9 +29,12 @@ function updateSearchResults() {
 
         if (matchSearch && matchFrom && matchTo) {
             card.classList.remove('hidden');
+            // Stagger animation for visible cards
+            card.style.transitionDelay = `${index * 0.05}s`;
             visibleCount += 1;
         } else {
             card.classList.add('hidden');
+            card.style.transitionDelay = '0s';
         }
     });
 
@@ -113,8 +116,11 @@ function initializeLightbox() {
 
     function closeLightbox() {
         overlay.classList.remove('active');
-        document.body.style.overflow = '';
-        img.src = '';
+        // Wait for animation to complete before resetting
+        setTimeout(() => {
+            document.body.style.overflow = '';
+            img.src = '';
+        }, 400);
     }
 
     busContainer.addEventListener('click', e => {
